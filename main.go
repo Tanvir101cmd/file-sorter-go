@@ -130,7 +130,7 @@ func moveFilesToDir(dir string, files []string) int {
 		dest := filepath.Join(typeDir, filename)
 
 		if moveFile(source, dest) {
-			fmt.Println("Moved %s to %s\n", filename, fileType)
+			fmt.Printf("Moved %s to %s\n", filename, fileType)
 			movedCount++
 		}
 	}

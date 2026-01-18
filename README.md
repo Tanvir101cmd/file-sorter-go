@@ -27,12 +27,12 @@ Run the executable and enter the path of the directory you want to organize:
 ### Supported Extensions
 | Category | Extensions |
 | :--- | :--- |
-| **Images** | jpg, jpeg, png, gif, bmp, svg, webp, ico, tiff |
+| **Images** | jpg, jpeg, png, dng, gif, bmp, svg, webp, ico, tiff |
 | **Documents** | pdf, doc, docx, txt, rtf, odt, md, ppt, pptx, xls, xlsx |
 | **Videos** | mp4, avi, mov, mkv, wmv, flv, webm, m4v, mpg |
 | **Audio** | mp3, wav, flac, aac, ogg, m4a, wma, mid, midi |
 | **Archives** | zip, rar, 7z, tar, gz, bz2, xz, iso |
-| **Code** | go, py, java, html, css, php, rb, json, xml, yaml, yml, csv, sql |
+| **Code** | go, py, java, c, html, css, php, rb, json, xml, yaml, yml, csv, sql |
 | **Apps** | app, sh, exe, msi|
 | **Installer** | pkg, deb, rpm |
 
