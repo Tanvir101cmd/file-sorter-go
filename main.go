@@ -83,6 +83,7 @@ func getFileType(filename string) string {
 	if category, found := categories[ext]; found {
 		return category
 	}
+	return ext + "_Files"
 }
 
 func createDir(dirPath string) bool {
@@ -93,7 +94,7 @@ func createDir(dirPath string) bool {
 
 	err = os.Mkdir(dirPath, 0755)
 	if err != nil {
-		fmt.Println("ERROR creating a folder", err)
+		fmt.Println("Error while creating a folder", err)
 		return false
 	}
 	fmt.Println("Created folder:", filepath.Base(dirPath))
@@ -103,7 +104,7 @@ func createDir(dirPath string) bool {
 func moveFile(source, dest string) bool {
 	err := os.Rename(source, dest)
 	if err != nil {
-		fmt.Println("Error moving file", err)
+		fmt.Println("Error while moving file", err)
 		return false
 	}
 	return true
