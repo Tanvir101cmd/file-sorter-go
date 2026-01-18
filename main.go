@@ -40,6 +40,10 @@ var categories = map[string]string {
 		"css": "Code", "php": "Code", "rb": "Code",
 		"json": "Code", "xml": "Code", "yaml": "Code",
 		"yml": "Code", "csv": "Code", "sql": "Code",
+
+		// Applications
+		"dmg": "Apps", "app": "Apps", "exe": "Apps", "sh": "Apps", "msi": "Apps",
+		"pkg": "Installer", "deb": "Installer", "rpm": "Installer",
 		}
 
 func get_cur_dir() string {

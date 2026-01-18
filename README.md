@@ -33,6 +33,8 @@ Run the executable and enter the path of the directory you want to organize:
 | **Audio** | mp3, wav, flac, aac, ogg, m4a, wma, mid, midi |
 | **Archives** | zip, rar, 7z, tar, gz, bz2, xz, iso |
 | **Code** | go, py, java, html, css, php, rb, json, xml, yaml, yml, csv, sql |
+| **Apps** | app, sh, exe, msi|
+| **Installer** | pkg, deb, rpm |
 
 ### Features yet to implement
 - [ ] dry-run mode to preview what changes it’ll make
