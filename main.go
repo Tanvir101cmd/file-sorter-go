@@ -9,7 +9,7 @@ import (
 
 var categories = map[string]string {
 		// Images
-		"jpg": "Images", "jpeg": "Images", "png": "Images",
+		"jpg": "Images", "jpeg": "Images", "png": "Images", "dng": "Images",
 		"gif": "Images", "bmp": "Images", "svg": "Images",
 		"webp": "Images", "ico": "Images", "tiff": "Images",
 
@@ -35,7 +35,7 @@ var categories = map[string]string {
 		"xz": "Archives", "iso": "Archives",
 
 		// Code
-		"go": "Code", "js": "Code", "py": "Code",
+		"go": "Code", "js": "Code", "py": "Code", "c": "Code",
 		"java": "Code", "cpp": "Code", "html": "Code",
 		"css": "Code", "php": "Code", "rb": "Code",
 		"json": "Code", "xml": "Code", "yaml": "Code",
