@@ -1,3 +1,3 @@
-module file-organizer
+module file-sorter-go
 
-go 1.25.5
+go 1.25.6
