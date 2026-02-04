@@ -32,7 +32,7 @@ var categories = map[string][]string {
 		"Other": {"other"},
 	}
 
-func get_cur_dir() string {
+func getCurrentDir() string {
 	var dir string
 	fmt.Print("Enter the directory to organize: ")
 	fmt.Scanln(&dir)
@@ -91,13 +91,11 @@ func createDir(dirPath string) bool {
 	return true
 }
 
-func moveFile(source, dest string) bool {
-	err := os.Rename(source, dest)
-	if err != nil {
-		fmt.Println("Error while moving file", err)
-		return false
+func moveFile(source, dest string) error {
+	if _, err := os.Stat(dest); err == nil {
+		return fmt.Errorf("destination file %s already exists", dest)
 	}
-	return true
+	return os.Rename(source, dest)
 }
 
 func moveFilesToDir(dir string, files []string) int {
@@ -124,10 +122,10 @@ func moveFilesToDir(dir string, files []string) int {
 }
 
 func main() {
-	dir := get_cur_dir()
+	dir := getCurrentDir()
 	fmt.Println("Currently at", dir)
 
-	files := getAllFiles(dir)
+	files := listAllFiles(dir)
 	fmt.Println(files)
 	fmt.Println("Number of files: ", len(files))
 
