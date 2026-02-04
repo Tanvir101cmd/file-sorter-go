@@ -40,6 +40,7 @@ Run the executable and enter the path of the directory you want to organize:
 - [ ] dry-run mode to preview what changes it’ll make
 - [ ] Undo to revert back changes
 - [ ] Deep scan to sort the files inside the subdirectories
+- [ ] Support for more file types
 - [ ] A progress bar
 - [ ] Flags/arguments for more options
 - [ ] Config file

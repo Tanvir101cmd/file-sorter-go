@@ -7,44 +7,30 @@ import (
 	"strings"
 )
 
-var categories = map[string]string {
+var categories = map[string][]string {
 		// Images
-		"jpg": "Images", "jpeg": "Images", "png": "Images", "dng": "Images",
-		"gif": "Images", "bmp": "Images", "svg": "Images",
-		"webp": "Images", "ico": "Images", "tiff": "Images",
+		"Images": {"jpg", "jpeg", "png", "dng", "gif", "bmp", "svg", "webp", "ico", "tiff"},
 
 		// Documents
-		"pdf": "Documents", "doc": "Documents", "docx": "Documents",
-		"txt": "Documents", "rtf": "Documents", "odt": "Documents",
-		"md": "Documents", "ppt": "Documents", "pptx": "Documents",
-		"xls": "Documents", "xlsx": "Documents",
+		"Documents": {"pdf", "doc", "docx", "txt", "rtf", "odt", "md", "ppt", "pptx", "xls", "xlsx"},
 
 		// Videos
-		"mp4": "Videos", "avi": "Videos", "mov": "Videos",
-		"mkv": "Videos", "wmv": "Videos", "flv": "Videos",
-		"webm": "Videos", "m4v": "Videos", "mpg": "Videos",
+		"Videos": {"mp4", "avi", "mov", "mkv", "wmv", "flv", "webm", "m4v", "mpg"},
 
 		// Audio
-		"mp3": "Audio", "wav": "Audio", "flac": "Audio",
-		"aac": "Audio", "ogg": "Audio", "m4a": "Audio",
-		"wma": "Audio", "mid": "Audio", "midi": "Audio",
+		"Audio": {"mp3", "wav", "flac", "aac", "ogg", "m4a", "wma", "mid", "midi"},
 
 		// Archives
-		"zip": "Archives", "rar": "Archives", "7z": "Archives",
-		"tar": "Archives", "gz": "Archives", "bz2": "Archives",
-		"xz": "Archives", "iso": "Archives",
+		"Archives": {"zip", "rar", "7z", "tar", "gz", "bz2", "xz", "iso"},
 
 		// Code
-		"go": "Code", "js": "Code", "py": "Code", "c": "Code",
-		"java": "Code", "cpp": "Code", "html": "Code",
-		"css": "Code", "php": "Code", "rb": "Code",
-		"json": "Code", "xml": "Code", "yaml": "Code",
-		"yml": "Code", "csv": "Code", "sql": "Code",
+		"Code": {"go", "js", "py", "c", "java", "cpp", "html", "css", "php", "rb", "json", "xml", "yaml", "yml", "csv", "sql"},
 
 		// Applications
-		"dmg": "Apps", "app": "Apps", "exe": "Apps", "sh": "Apps", "msi": "Apps",
-		"pkg": "Installer", "deb": "Installer", "rpm": "Installer",
-		}
+		"Apps": {"dmg", "app", "exe", "sh", "msi"},
+		"Installer": {"pkg", "deb", "rpm"},
+		"Other": {"other"},
+	}
 
 func get_cur_dir() string {
 	var dir string
