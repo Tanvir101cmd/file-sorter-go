@@ -61,18 +61,19 @@ func getAllFiles(dir string) []string {
 }
 
 func getFileType(filename string) string {
-	ext := filepath.Ext(filename)
-
-	if len(ext) > 0 {
-		ext = strings.ToLower(ext[1:]) // slicing out the extension name jpg rather than .jpg
-	}
+	ext := strings.ToLower(filepath.Ext(filename))
 
 	if ext == "" {
 		return "Other"
 	}
-	if category, found := categories[ext]; found {
-		return category
+	for category, extensions := range categories {
+		for _, extension := range extensions {
+			if ext == "."+extension {
+				return category
+			}
+		}
 	}
+
 	return ext + "_Files"
 }
 
@@ -113,9 +114,11 @@ func moveFilesToDir(dir string, files []string) int {
 		source := filepath.Join(dir, filename)
 		dest := filepath.Join(typeDir, filename)
 
-		if moveFile(source, dest) {
+		if err := moveFile(source, dest); err == nil {
 			fmt.Printf("Moved %s to %s\n", filename, fileType)
 			movedCount++
+		} else {
+			fmt.Printf("Failed to move %s: %v\n", filename, err)
 		}
 	}
 	return movedCount
