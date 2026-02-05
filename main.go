@@ -125,7 +125,7 @@ func main() {
 	dir := getCurrentDir()
 	fmt.Println("Currently at", dir)
 
-	files := listAllFiles(dir)
+	files := getAllFiles(dir)
 	fmt.Println(files)
 	fmt.Println("Number of files: ", len(files))
 
